@@ -23,10 +23,11 @@ function HeaderGenaral() {
                     <div className="flex items-center space-x-2">
                         <input
                             type="text"
+                            id='search text'
                             placeholder="Search Book..."
                             className="bg-white border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                         />
-                        <button className='flex items-center space-x-2 rounded hover:rounded border-2 border-green-500/100 bg-green-100 hover:bg-green-600 text-black font-semibold py-2 px-6 '>
+                        <button className='flex items-center space-x-2 rounded hover:rounded border-2 border-green-500/100 bg-green-100 hover:bg-green-500 text-black font-semibold py-2 px-6 '>
                             <BsSearch />
                             <span>
                                 Search

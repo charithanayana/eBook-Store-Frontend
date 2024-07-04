@@ -1,16 +1,16 @@
 
-import Carousel from "./Components/Carousel"
+import Carousel from "./Components/Carousel/Carousel"
 import HeaderGenaral from "./Components/HeaderGenaral"
 
 
 
-function Home() {
- 
+function Home () {
+
 
   return (
     <>
-    <HeaderGenaral/>
-    <Carousel />
+      <HeaderGenaral />
+      <Carousel />
     </>
   )
 }
