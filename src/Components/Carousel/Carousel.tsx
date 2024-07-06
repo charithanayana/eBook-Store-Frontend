@@ -30,9 +30,9 @@ function Carousel() {
                 {data.map((props, i) => (
                     <div key={props.id} className={imageIndex === i ? "block" : "hidden "}>
                         <img src={props.Image} className="rounded-lg " />
-                        <div className="absolute top-0 pl-80 pt-56 " >
-                            <h1 className="text-white bg-gray-800/35" >{props.heding}</h1>
-                            <p className="text-white bg-gray-800/35" >{props.details}</p>
+                        <div className="absolute left-1/3 top-96 pl-16" >
+                            <h1 className="text-white bg-gray-800/60 text-7xl text-center" >{props.heding}</h1>
+                            <p className="text-white bg-gray-800/60 text-center" >{props.details}</p>
                         </div>
                     </div>
                 ))}
@@ -43,7 +43,7 @@ function Carousel() {
                     <RiArrowRightWideFill className="size-12 hover:focus-visible:" />
                 </button>
 
-                <div style={{ position: "absolute", top: "28rem", left: "50%", translate: "-50%", display: "flex", gap: ".25rem" }}>
+                <div style={{ position: "absolute", top: "32rem", left: "50%", translate: "-50%", display: "flex", gap: ".25rem" }}>
                     {data.map((_, index) => (
                         <button className="hover:scale-125 duration-700" key={index} onClick={() => setImageIndex(index)}> {index === imageIndex ? <FaCircleDot className="fill-gray-400" /> : <FaCircle />}</button>
                     ))}
