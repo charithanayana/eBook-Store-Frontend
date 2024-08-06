@@ -2,9 +2,11 @@ import logo from '../assets/Image/logo.png'
 import { BsBoxArrowInRight } from "react-icons/bs";
 import { BsFillPersonPlusFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 
 
 function HeaderGenaral() {
+    const navigate = useNavigate();
 
 
 
@@ -36,7 +38,7 @@ function HeaderGenaral() {
                     </div>
                     { /* ---- Login & sign up buttons ---- */}
                     <div className='flex space-x-2'>
-                        <button className='flex items-center space-x-2 rounded hover:rounded border-2 border-blue-500/100 bg-blue-100 hover:bg-blue-500 text-black font-semibold py-2 px-6'>
+                        <button onClick={()=> navigate("/login")} className='flex items-center space-x-2 rounded hover:rounded border-2 border-blue-500/100 bg-blue-100 hover:bg-blue-500 text-black font-semibold py-2 px-6'>
                             <BsBoxArrowInRight />
                             <span>
                                 Login

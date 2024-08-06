@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import Home from './Home.tsx'
+import Login from './Components/Login/Login.tsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -10,6 +11,10 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",element: <Home />,
+    
+  },
+  {
+    path: "/login",element: <Login />,
   },
 ]);
 
