@@ -3,19 +3,18 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import Home from './Home.tsx'
 import Login from './Components/Login/Login.tsx'
+import SignUp from './Components/SignUp/SignUp.tsx'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
 const router = createBrowserRouter([
-  {
-    path: "/",element: <Home />,
-    
-  },
-  {
-    path: "/login",element: <Login />,
-  },
+
+  {path: "/",element: <Home />},
+  {path: "/login",element: <Login />},
+  {path: "/signup",element: <SignUp />},
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

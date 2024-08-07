@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+
+  const navigate = useNavigate();
   return (
     <div className="flex items-center justify-center h-screen w-full px-5 sm:px-0">
     <div className="flex bg-white rounded-lg shadow-lg border overflow-hidden max-w-md lg:max-w-md w-full">
@@ -73,11 +76,11 @@ function Login() {
         </a>
         <div className="mt-4 flex items-center w-full text-center">
           <a
-            href="#"
+            
             className="text-xs text-gray-500 capitalize text-center w-full"
           >
             Don&apos;t have any account yet?
-            <span className="text-blue-700"> Sign Up</span>
+            <span className="text-blue-700"><button onClick={()=> navigate("/signup")}>Sign Up</button> </span>
           </a>
         </div>
       </div>
