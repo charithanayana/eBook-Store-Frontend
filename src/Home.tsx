@@ -4,7 +4,8 @@ import HeaderGenaral from "./Components/HeaderGenaral"
 
 
 
-function Home () {
+
+function Home() {
 
 
   return (

@@ -9,7 +9,7 @@ function Login() {
     <div className="flex bg-white rounded-lg shadow-lg border overflow-hidden max-w-md lg:max-w-md w-full">
       
       <div className="w-full p-8 lg:w-md">
-        <p className="text-xl text-gray-600 text-center text-black font-semibold">Welcome back!</p>
+        <p className="text-xl text-blue-700 text-center text-black font-semibold">Welcome back!</p>
         <div className="mt-4">
           <label className="block text-gray-700 text-black font-semibold mb-2">
             Email Address
@@ -17,6 +17,7 @@ function Login() {
           <input
             className="text-gray-700 border border-gray-300 rounded py-2 px-4 block w-full focus:outline-2 focus:outline-blue-700"
             type="email"
+            placeholder='email'
             required
           />
         </div>
