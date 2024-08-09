@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
@@ -9,21 +8,20 @@ function Login() {
     <div className="flex bg-white rounded-lg shadow-lg border overflow-hidden max-w-md lg:max-w-md w-full">
       
       <div className="w-full p-8 lg:w-md">
-        <p className="text-xl text-blue-700 text-center text-black font-semibold">Welcome back!</p>
+        <p className="text-xl text-center text-black font-semibold">Welcome back!</p>
         <div className="mt-4">
-          <label className="block text-gray-700 text-black font-semibold mb-2">
+          <label className="block text-black font-semibold mb-2">
             Email Address
           </label>
           <input
             className="text-gray-700 border border-gray-300 rounded py-2 px-4 block w-full focus:outline-2 focus:outline-blue-700"
             type="email"
-            placeholder='email'
             required
           />
         </div>
         <div className="mt-4 flex flex-col justify-between">
           <div className="flex justify-between">
-            <label className="block text-gray-700 text-black font-semibold mb-2">
+            <label className="block text-black font-semibold mb-2">
               Password
             </label>
           </div>
@@ -33,7 +31,7 @@ function Login() {
           />
           <a
             href="#"
-            className="text-xs text-gray-500 hover:text-gray-900 text-end text-black font-semibold w-full mt-2"
+            className="text-xs text-gray-500 hover:text-gray-900 text-end font-semibold w-full mt-2"
           >
             Forget Password?
           </a>

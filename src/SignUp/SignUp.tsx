@@ -23,9 +23,9 @@ function SignUp() {
       name: "firstName",
       type: "text",
       placeholder: "Charitha",
-      errorMessage:"First Name Max 16 characters!",
+      errorMessage:"First Name Max 16 characters and should not include any special characters!",
       label: "First Name",
-      
+      pattern: "^[A-Za-z0-9]{3,16}$",
       required: true,
     },
     {
@@ -33,8 +33,9 @@ function SignUp() {
       name: "lastName",
       type: "text",
       placeholder: "Punchihewa",
-      errorMessage:"Last Name Max 16 characters!",
+      errorMessage:"Last Name Max 16 characters  and should not include any special characters!",
       label: "Last Name",
+      pattern: "^[A-Za-z0-9]{3,16}$",
       required: true,
     },
     {
@@ -49,10 +50,11 @@ function SignUp() {
     {
       id: 4,
       name: "phoneNumber",
-      type: "text",
+      type: "",
       placeholder: "0770000000",
-      errorMessage:"It should be a valid phone number!",
+      errorMessage:"Phone number should be 10 digit long!",
       label: "Phone Number",
+      pattern: "^[0-9]{10}$", 
       required: true,
     },
     {
@@ -78,6 +80,7 @@ function SignUp() {
       placeholder: "******",
       errorMessage:"Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
       label: "Password",
+      pattern: "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,20}$",
       required: true,
     },
     {
@@ -87,6 +90,7 @@ function SignUp() {
       placeholder: "******",
       errorMessage:"Password don' t match! ",
       label: "Confirm Password",
+      pattern: values.password,
       required: true,
     }
   ]
