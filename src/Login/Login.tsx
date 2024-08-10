@@ -79,7 +79,7 @@ function Login() {
             className="text-xs text-gray-500 capitalize text-center w-full"
           >
             Don&apos;t have any account yet?
-            <span className="text-blue-700"><button onClick={()=> navigate("/signup")}>Sign Up</button> </span>
+            <strong className="text-blue-700"><button onClick={()=> navigate("/signup")}>Sign Up</button> </strong>
           </a>
         </div>
       </div>

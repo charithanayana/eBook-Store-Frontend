@@ -159,9 +159,9 @@ function SignUp() {
             <div className="mt-4 flex items-center w-full text-center">
               <div className="text-xs text-gray-500 capitalize text-center w-full">
                 Already have an account?
-                <span className="text-blue-700">
+                <strong className="text-blue-700">
                   <button onClick={() => navigate("/login")}>Login</button>
-                </span>
+                </strong>
               </div>
             </div>
           </div>

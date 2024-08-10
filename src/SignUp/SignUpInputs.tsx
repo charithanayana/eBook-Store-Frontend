@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './SignUp.css'
 
 
 
@@ -22,10 +23,12 @@ const SignUpInputs = (props: any) => {
                 {...inputProps}
                 onChange={onChange}
                 onBlur={handleFocus}
+                onFocus={() =>
+                    inputProps.name === "confirmPassword" && setFocused(true)}
                 focused={focused.toString()}
             />
 
-            <span className="text-red-600 text-sm hidden peer-invalid:block">
+            <span>
                 {errorMessage}
             </span>
 
