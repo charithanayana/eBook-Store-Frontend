@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import SignUpInputs from './SignUpInputs'
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 
 function SignUp() {
+
+  let navigate=useNavigate()
 
   const [values, setValues] = useState({
 
@@ -16,6 +19,7 @@ function SignUp() {
     password: "",
     confirmPassword: ""
   });
+
 
   const inputs = [
     {
@@ -96,17 +100,18 @@ function SignUp() {
   ]
 
 
-  const handleSubmit = (e: any) => {
-    e.preventDefult();
+  const handleSubmit = async (e:any) => {
+    e.preventDefault();
+    await axios.post("http://localhost:8080/api/v1/addUser",values)
+    navigate("/")
+
   };
 
   const onChange = (e:any) => {
     setValues({...values, [e.target.name]: e.target.value});
   }
 
-  const navigate = useNavigate();
-
-  console.log(values);
+  
 
 
   return (
@@ -116,7 +121,7 @@ function SignUp() {
 
           <div className="w-full p-8 lg:w-md">
             <p className="text-2xl text-blue-700 text-center font-semibold">Register</p>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={(e) => handleSubmit(e)}>
               {inputs.map((input) =>(
                 <SignUpInputs key={input.id} {... input} value={values[input.name as keyof typeof values]} onChange={onChange}/>
               ))}

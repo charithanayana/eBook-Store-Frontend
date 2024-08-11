@@ -28,9 +28,9 @@ const SignUpInputs = (props: any) => {
                 focused={focused.toString()}
             />
 
-            <span>
+            <strong className=".error">
                 {errorMessage}
-            </span>
+            </strong>
 
 
         </div>

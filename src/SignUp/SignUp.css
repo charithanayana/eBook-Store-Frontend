@@ -1,4 +1,4 @@
-span{
+strong{
     font-size: 12px;
     padding: 3px;
     color: red;
@@ -8,6 +8,6 @@ span{
 input:invalid[focused= "true"]{
     border: 1px solid red;
 }
-input:invalid[focused= "true"] ~ span{
+input:invalid[focused= "true"] ~ strong{
     display: block;
 }
